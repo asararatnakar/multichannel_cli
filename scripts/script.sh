@@ -223,7 +223,7 @@ do
 		instantiateChaincode 2 $i $j
 	done
 done
-wait 120
+wait 30
 for (( i=1; i<=$TOTAL_CHANNELS; i=$i+1 ))
 do
 	for (( j=1; j<=$TOTAL_CCS; j=$j+1 ))
@@ -233,7 +233,7 @@ do
 		chaincodeInvoke 0 $i $j
 	done
 done
-wait 120
+wait 30
 for (( i=1; i<=$TOTAL_CHANNELS; i=$i+1 ))
 do
 	for (( j=1; j<=$TOTAL_CCS; j=$j+1 ))

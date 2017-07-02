@@ -19,7 +19,6 @@ export CCS
 export TIMEOUT
 COMPOSE_FILE=docker-compose-cli.yaml
 COMPOSE_FILE_COUCH=docker-compose-couch.yaml
-#COMPOSE_FILE=docker-compose-e2e.yaml
 
 function printHelp () {
 	echo "Usage: ./network_setup <up|down> <total_channels> <total_chaincodes>  <couchdb>.\nThe arguments must be in order."
@@ -83,6 +82,7 @@ function init() {
 		done
 	fi	
 }
+init
 #Create the network using docker compose
 if [ "${UP_DOWN}" == "up" ]; then
 	networkUp
